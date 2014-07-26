@@ -10,11 +10,11 @@ body{
 .message{
   display: block;
   max-height: 1000px;
-  -webkit-transition: max-height 1.5s; 
-  -moz-transition: max-height 1.5s; 
-  -ms-transition: max-height 1.5s; 
-  -o-transition: max-height 1.5s; 
-  transition: max-height 1.5s;
+  -webkit-transition: max-height 3s; 
+  -moz-transition: max-height 3s; 
+  -ms-transition: max-height 3s; 
+  -o-transition: max-height 3s; 
+  transition: max-height 3s;
   overflow: hidden;
   color: white;
 }
@@ -100,13 +100,19 @@ header{
   right: 2rem;
   position: fixed;
   z-index: 3;
+  min-width: 1px;
   text-transform: uppercase;
   color: white;
+  height: 1em;
+  display: block;
+  text-align: right;
 }
 
 #chat > #msgBox{
-  height: calc( 100% - 2rem );
-  padding: 1rem;
+  height: calc( 100% - 3rem );
+  padding: 0 1rem;
+  border-top: solid 1rem #FF4958;
+  border-bottom: solid 1rem #FF4958;
   background-color: #FF4958;
   top: 0;
   overflow: scroll;

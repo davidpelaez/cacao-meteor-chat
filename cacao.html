@@ -21,7 +21,7 @@
 
 <template name="chat">
   <header>{{sessionNickname}}</header>
-  <div id="chat" style="dispslay: nosne">
+  <div id="chat" style="display: none">
     <div id="msgBox">
       <table>
         {{#each messages}}
@@ -32,7 +32,7 @@
       </table>
     </div>
     <form>
-      <input type="text" placeholder="Type your message..." id="messageBody"/>
+      <input type="text" placeholder="Type your message..." id="messageBody" autocomplete="off"/>
       <button type="submit">Send</button>
     </form>
   </div>
