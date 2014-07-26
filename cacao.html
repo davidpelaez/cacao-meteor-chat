@@ -1,0 +1,46 @@
+<head>
+  <title>Cacao Realtime Chat</title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css" />
+  <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  {{>login}}
+  {{>chat}}
+</body>
+
+<template name="login">
+  <div id="login">
+    <form>
+      <input type="text" id="nickname" placeholder="Nickname" />
+      <button type="submit">Join</button>
+    </form>
+  </div>
+</template>
+
+<template name="chat">
+  <header>{{sessionNickname}}</header>
+  <div id="chat" style="dispslay: nosne">
+    <div id="msgBox">
+      <table>
+        {{#each messages}}
+          {{#if displayMessage}}
+            {{>message}}
+          {{/if}}
+        {{/each}}
+      </table>
+    </div>
+    <form>
+      <input type="text" placeholder="Type your message..." id="messageBody"/>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</template>
+
+<template name="message">
+  <tr id="{{_id}}" class="message" style="opacity: {{opacity}}">
+    <td>{{nickname}}</td>
+    <td>{{body}}</td>
+  </tr>
+</template>

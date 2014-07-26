@@ -1,0 +1,113 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.message{
+  display: block;
+  max-height: 1000px;
+  -webkit-transition: max-height 1.5s; 
+  -moz-transition: max-height 1.5s; 
+  -ms-transition: max-height 1.5s; 
+  -o-transition: max-height 1.5s; 
+  transition: max-height 1.5s;
+  overflow: hidden;
+  color: white;
+}
+
+.folded{
+  max-height: 0 !important;
+}
+
+#login, #chat{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+#login{
+  background-color: #12A8B5;
+  z-index: 999;
+  display: table;
+}
+
+#chat{
+  border: solid thin red;  
+}
+
+#login form{
+  max-width: 960px;
+  margin: 0 auto;
+  vertical-align: middle;
+  text-align: center;
+  display: table-cell;
+}
+
+#chat > *{
+  width: 100%;
+  display: block;
+  position: fixed;
+  left: 0;
+}
+
+#chat > form{
+  bottom: 0;
+  height: 3rem;
+}
+
+#chat button{
+  position: absolute;
+  right:0;
+  bottom: 0;
+}
+
+#chat input{
+  width: 100%;
+}
+
+input, button{
+  height: 3rem;
+  font-size: 1rem !important;
+  vertical-align: middle;
+  padding: 1rem;
+  border: none;
+}
+
+.message > td:first-child {
+  padding-right: 10px;
+  color: #333;
+}
+
+.message > td:first-child::after{
+  content: ':';
+}
+
+button{
+  margin-left: 5px !important;
+  text-transform: uppercase !important;
+  background-color: #333;
+  color: white !important;
+}
+
+header{
+  top: 2rem;
+  right: 2rem;
+  position: fixed;
+  z-index: 3;
+  text-transform: uppercase;
+  color: white;
+}
+
+#chat > #msgBox{
+  height: calc( 100% - 2rem );
+  padding: 1rem;
+  background-color: #FF4958;
+  top: 0;
+  overflow: scroll;
+}
