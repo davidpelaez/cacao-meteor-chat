@@ -104,7 +104,7 @@ header{
   text-transform: uppercase;
   color: white;
   height: 1em;
-  display: block;
+  /*display: block;*/
   text-align: right;
 }
 
